@@ -153,7 +153,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="mx-auto max-w-2xl text-gray-400">
-              RoastItUp combines comedy, competition, and community in one fiery package. Here's what makes our platform
+              RoastItUp combines comedy, competition, and community in one fiery package. Here&rsquo;s what makes our platform
               sizzle.
             </p>
           </div>
