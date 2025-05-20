@@ -1,8 +1,10 @@
 
-export default function Home() {
+const Register = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center">
-      Hello
+      Login
     </div>
-  );
+  )
 }
+
+export default Register
