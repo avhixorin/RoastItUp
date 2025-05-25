@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { Eye, EyeClosed, EyeOff, FlameIcon } from "lucide-react";
+import { Eye, EyeOff, FlameIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
