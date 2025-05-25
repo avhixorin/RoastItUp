@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { RocketIcon } from "lucide-react"
+import { FlameIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -20,7 +20,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="mb-8 flex flex-col items-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-red-600 shadow-lg shadow-red-600/20">
-            <RocketIcon className="h-8 w-8 text-white" />
+            <FlameIcon className="h-10 w-10 text-white" />
           </div>
           <h1 className="mt-4 text-center text-4xl font-extrabold tracking-tight text-white">
             <span className="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent">RoastItUp</span>
