@@ -135,7 +135,7 @@ export default function Page() {
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-sm font-medium text-white">Show Online Status</Label>
-                  <p className="text-sm text-gray-400">Let others see when you're online</p>
+                  <p className="text-sm text-gray-400">Let others see when you&apos;re online</p>
                 </div>
                 <Switch defaultChecked />
               </div>

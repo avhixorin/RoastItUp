@@ -1,21 +1,7 @@
 "use client"
-
-import { useState } from "react"
-import { Home, Sword, Trophy, User, Settings, LogOut, Bell, FlameIcon, Menu, X } from "lucide-react"
-
+import { Sword, Trophy, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
 export default function DashboardPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-
-  const navigationItems = [
-    { name: "Home", icon: Home, href: "/dashboard", active: true },
-    { name: "Battles", icon: Sword, href: "/battles", active: false },
-    { name: "Leaderboard", icon: Trophy, href: "/leaderboard", active: false },
-    { name: "Profile", icon: User, href: "/profile", active: false },
-    { name: "Settings", icon: Settings, href: "/settings", active: false },
-  ]
 
   const stats = [
     { label: "Recent Wins", value: "12", change: "+3", color: "from-green-500 to-emerald-600" },

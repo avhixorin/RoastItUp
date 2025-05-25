@@ -17,14 +17,13 @@ export default function ChatPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [newMessage, setNewMessage] = useState("")
 
-  // Mock data
   const searchResults = [
     {
       id: "search1",
       username: "FireBreather",
       displayName: "Fire Breather",
       avatar: "/placeholder.svg?height=40&width=40",
-      status: "add", // add, pending, connected
+      status: "add",
       online: true,
     },
     {
@@ -116,7 +115,7 @@ export default function ChatPage() {
     },
   ]
 
-  const getStatusButton = (status: string, userId: string) => {
+  const getStatusButton = (status: string) => {
     switch (status) {
       case "add":
         return (
@@ -232,7 +231,7 @@ export default function ChatPage() {
                                 <p className="text-xs text-gray-400">@{user.username}</p>
                               </div>
                             </div>
-                            {getStatusButton(user.status, user.id)}
+                            {getStatusButton(user.status)}
                           </div>
                         </CardContent>
                       </Card>
