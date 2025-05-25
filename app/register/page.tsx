@@ -1,11 +1,13 @@
-import Link from "next/link"
-import { FlameIcon } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+"use client"
+import Link from "next/link";
+import { Eye, EyeClosed, EyeOff, FlameIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 export default function RegisterPage() {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center bg-black">
       {/* Fiery background effect */}
@@ -31,7 +33,9 @@ export default function RegisterPage() {
             <FlameIcon className="h-10 w-10 text-white" />
           </div>
           <h1 className="mt-4 text-center text-4xl font-extrabold tracking-tight text-white">
-            <span className="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent">RoastItUp</span>
+            <span className="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent">
+              RoastItUp
+            </span>
           </h1>
           <p className="mt-2 text-center text-gray-400">Create your account</p>
         </div>
@@ -40,7 +44,10 @@ export default function RegisterPage() {
         <div className="overflow-hidden rounded-xl border border-red-900/20 bg-black/40 p-6 shadow-[0_0_15px_rgba(239,68,68,0.2)] backdrop-blur-xl">
           <form className="space-y-5">
             <div className="space-y-2">
-              <Label htmlFor="username" className="text-sm font-medium text-gray-300">
+              <Label
+                htmlFor="username"
+                className="text-sm font-medium text-gray-300"
+              >
                 Username
               </Label>
               <Input
@@ -51,7 +58,10 @@ export default function RegisterPage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-medium text-gray-300">
+              <Label
+                htmlFor="email"
+                className="text-sm font-medium text-gray-300"
+              >
                 Email
               </Label>
               <Input
@@ -62,24 +72,43 @@ export default function RegisterPage() {
               />
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="password" className="text-sm font-medium text-gray-300">
+            <div className="space-y-2 relative">
+              <Label
+                htmlFor="password"
+                className="text-sm font-medium text-gray-300"
+              >
                 Password
               </Label>
               <Input
                 id="password"
-                type="password"
+                type={isPasswordVisible ? "text" : "password"}
+                placeholder="Create a strong password"
                 className="border-gray-800 bg-black/50 text-white placeholder:text-gray-500 focus-visible:ring-orange-500"
               />
+              <div
+                role="button"
+                onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+              >
+                {isPasswordVisible ? (
+                  <EyeOff className="absolute right-3 top-[73%] -translate-y-1/2 text-gray-500 cursor-pointer" />
+                ) : (
+                  <Eye className="absolute right-3 top-[73%] -translate-y-1/2 text-gray-500 cursor-pointer" />
+                )}
+              </div>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="confirmPassword" className="text-sm font-medium text-gray-300">
+              <Label
+                htmlFor="confirmPassword"
+                className="text-sm font-medium text-gray-300"
+              >
                 Confirm Password
               </Label>
               <Input
                 id="confirmPassword"
                 type="password"
+                placeholder="Re-enter your password"
+                onPaste={(e) => e.preventDefault()}
                 className="border-gray-800 bg-black/50 text-white placeholder:text-gray-500 focus-visible:ring-orange-500"
               />
             </div>
@@ -91,7 +120,10 @@ export default function RegisterPage() {
 
           <div className="mt-6 text-center text-sm text-gray-400">
             Already have an account?{" "}
-            <Link href="/login" className="font-medium text-orange-400 transition-colors hover:text-orange-300">
+            <Link
+              href="/login"
+              className="font-medium text-orange-400 transition-colors hover:text-orange-300"
+            >
               Log In
             </Link>
           </div>
@@ -110,5 +142,5 @@ export default function RegisterPage() {
         </p>
       </div>
     </div>
-  )
+  );
 }

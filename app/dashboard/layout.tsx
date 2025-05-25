@@ -25,7 +25,7 @@ export default function DashboardLayout({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
-  
+
   console.log("Current Pathname:", pathname);
   const navigationItems = [
     { name: "Home", icon: Home, href: "home" },
@@ -37,7 +37,11 @@ export default function DashboardLayout({
   ];
 
   return (
-    <div className="flex h-screen bg-black text-white">
+    <div className="flex h-screen bg-black text-white relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,115,0,0.4)_0%,_rgba(255,0,128,0.2)_60%,_transparent_100%)] blur-[120px]"></div>
+      </div>
+
       {sidebarOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
@@ -72,9 +76,9 @@ export default function DashboardLayout({
 
           <nav className="flex-1 space-y-2 p-4">
             {navigationItems.map((item) => {
-              const isActive = pathname === ("/dashboard/" + item.href);
+              const isActive = pathname === "/dashboard/" + item.href;
               console.log("Pathname Check:", pathname);
-                console.log("Item Href Check:", item.href);
+              console.log("Item Href Check:", item.href);
               return (
                 <Link
                   key={item.name}
@@ -89,12 +93,16 @@ export default function DashboardLayout({
                 `}
                 >
                   <item.icon
-                    className={`h-5 w-5 transition-colors ${isActive ? "text-orange-400" : "text-gray-500 group-hover:text-white"}`}
+                    className={`h-5 w-5 transition-colors ${
+                      isActive
+                        ? "text-orange-400"
+                        : "text-gray-500 group-hover:text-white"
+                    }`}
                   />
                   {item.name}
                   {isActive && (
-                  <div className="ml-auto h-2 w-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600"></div>
-                )}
+                    <div className="ml-auto h-2 w-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600"></div>
+                  )}
                 </Link>
               );
             })}
@@ -146,7 +154,7 @@ export default function DashboardLayout({
             </div>
           </div>
         </header>
-        <main className="flex-1 overflow-auto bg-gradient-to-br from-black to-gray-900 p-4 md:p-6">
+        <main className="flex-1 overflow-auto bg-gradient-to-br from-black to-gray-900">
           {children}
         </main>
       </div>
