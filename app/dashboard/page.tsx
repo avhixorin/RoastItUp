@@ -24,7 +24,7 @@ export default function DashboardPage() {
   ]
 
   return (
-    <div className="flex h-screen bg-black text-white">
+    <div className="flex h-full bg-black text-white">
       {/* Main Content */}
       <div className="flex flex-1 flex-col overflow-hidden">
         {/* Dashboard Content */}

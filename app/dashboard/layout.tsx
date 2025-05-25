@@ -12,6 +12,7 @@ import {
   FlameIcon,
   Menu,
   X,
+  MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -29,6 +30,7 @@ export default function DashboardLayout({
   console.log("Current Pathname:", pathname);
   const navigationItems = [
     { name: "Home", icon: Home, href: "home" },
+    { name: "Chats", icon: MessageSquare, href: "chats" },
     { name: "Battles", icon: Sword, href: "battles" },
     { name: "Leaderboard", icon: Trophy, href: "leaderboard" },
     { name: "Profile", icon: User, href: "profile" },
