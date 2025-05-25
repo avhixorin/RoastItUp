@@ -181,12 +181,7 @@ export default function ChatPage() {
         <div className="flex h-full flex-col">
           {/* Header */}
           <div className="border-b border-gray-800 p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold">
-                <span className="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent">
-                  Connect & Chat
-                </span>
-              </h2>
+            <div className="flex items-center justify-between">
               <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setSidebarOpen(false)}>
                 <X className="h-5 w-5" />
               </Button>

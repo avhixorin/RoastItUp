@@ -24,7 +24,7 @@ export default function DashboardPage() {
   ]
 
   return (
-    <div className="min-h-screen flex h-full bg-black text-white">
+    <div className="min-h-screen flex bg-black text-white">
       {/* Main Content */}
       <div className="flex flex-1 flex-col overflow-hidden">
         {/* Dashboard Content */}
@@ -39,6 +39,7 @@ export default function DashboardPage() {
             </h1>
             <p className="text-gray-400">Ready to bring the heat? Your roasting arena awaits.</p>
           </div>
+          
 
           {/* Stats Cards */}
           <div className="mb-8 grid gap-6 md:grid-cols-3">
