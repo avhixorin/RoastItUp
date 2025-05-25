@@ -28,7 +28,7 @@ export default function DashboardPage() {
 
           {/* Stats Cards */}
           <div className="mb-8 grid gap-6 md:grid-cols-3">
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
                 className="group relative overflow-hidden rounded-xl border border-gray-800 bg-black/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-orange-900/50 hover:shadow-lg hover:shadow-orange-600/10"
