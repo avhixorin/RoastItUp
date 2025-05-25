@@ -101,13 +101,11 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 p-4 md:p-6">
       <div className="mx-auto max-w-6xl">
-        {/* Header */}
         <div className="mb-8">
           <h2 className="mb-2 text-3xl font-bold text-white">🏆 Leaderboard</h2>
           <p className="text-gray-400">Top roasters based on win streak and votes.</p>
         </div>
 
-        {/* Leaderboard Table */}
         <div className="rounded-2xl border border-gray-800 bg-black/40 backdrop-blur-sm shadow-2xl">
           <Table>
             <TableHeader>
@@ -168,7 +166,6 @@ export default function Page() {
           </Table>
         </div>
 
-        {/* Stats Summary */}
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-gray-800 bg-black/40 p-6 backdrop-blur-sm">
             <div className="text-center">

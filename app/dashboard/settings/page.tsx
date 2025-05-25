@@ -11,14 +11,12 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 p-4 md:p-6">
       <div className="mx-auto max-w-4xl">
-        {/* Header */}
         <div className="mb-8">
           <h2 className="mb-2 text-3xl font-bold text-white">⚙️ Settings</h2>
           <p className="text-gray-400">Manage your account preferences and security settings.</p>
         </div>
 
         <div className="space-y-8">
-          {/* General Settings */}
           <Card className="border-gray-800 bg-black/40 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-white">General Settings</CardTitle>
@@ -39,7 +37,6 @@ export default function Page() {
 
               <Separator className="bg-gray-800" />
 
-              {/* Dark Mode */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <Moon className="h-5 w-5 text-orange-500" />
@@ -53,7 +50,6 @@ export default function Page() {
 
               <Separator className="bg-gray-800" />
 
-              {/* Account Visibility */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <Eye className="h-5 w-5 text-orange-500" />
@@ -67,7 +63,6 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          {/* Security Settings */}
           <Card className="border-gray-800 bg-black/40 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
@@ -79,7 +74,6 @@ export default function Page() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              {/* Current Password */}
               <div className="space-y-2">
                 <Label htmlFor="currentPassword" className="text-sm font-medium text-gray-300">
                   Current Password
@@ -91,7 +85,6 @@ export default function Page() {
                 />
               </div>
 
-              {/* New Password */}
               <div className="space-y-2">
                 <Label htmlFor="newPassword" className="text-sm font-medium text-gray-300">
                   New Password
@@ -103,7 +96,6 @@ export default function Page() {
                 />
               </div>
 
-              {/* Confirm Password */}
               <div className="space-y-2">
                 <Label htmlFor="confirmPassword" className="text-sm font-medium text-gray-300">
                   Confirm New Password
@@ -123,7 +115,6 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          {/* Privacy Settings */}
           <Card className="border-gray-800 bg-black/40 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-white">Privacy Settings</CardTitle>
@@ -132,7 +123,6 @@ export default function Page() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              {/* Show Online Status */}
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-sm font-medium text-white">Show Online Status</Label>
@@ -143,7 +133,6 @@ export default function Page() {
 
               <Separator className="bg-gray-800" />
 
-              {/* Show Battle History */}
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-sm font-medium text-white">Public Battle History</Label>
@@ -154,7 +143,6 @@ export default function Page() {
 
               <Separator className="bg-gray-800" />
 
-              {/* Allow Friend Requests */}
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-sm font-medium text-white">Allow Friend Requests</Label>
@@ -165,7 +153,6 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          {/* Danger Zone */}
           <Card className="border-red-900/50 bg-red-950/20 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-red-400">

@@ -36,13 +36,10 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 p-4 md:p-6">
       <div className="mx-auto max-w-6xl">
-        {/* Header */}
         <div className="mb-8">
           <h2 className="mb-2 text-3xl font-bold text-white">🔥 Battles</h2>
           <p className="text-gray-400">This is the battle arena. Join or spectate real-time roast battles here.</p>
         </div>
-
-        {/* Action Buttons */}
         <div className="mb-8 grid gap-4 md:grid-cols-2">
           <Card className="border-gray-800 bg-black/40 backdrop-blur-sm">
             <CardContent className="p-6">
@@ -78,8 +75,6 @@ export default function Page() {
             </CardContent>
           </Card>
         </div>
-
-        {/* Ongoing Battles */}
         <div>
           <h3 className="mb-6 text-2xl font-bold text-white">Live Battles</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -96,7 +91,6 @@ export default function Page() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {/* Participants */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Avatar className="h-8 w-8">
@@ -118,8 +112,7 @@ export default function Page() {
                         </Avatar>
                       </div>
                     </div>
-
-                    {/* Stats */}
+                    
                     <div className="flex items-center justify-between text-sm text-gray-400">
                       <div className="flex items-center gap-1">
                         <Eye className="h-4 w-4" />

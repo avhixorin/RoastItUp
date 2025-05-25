@@ -150,7 +150,6 @@ export default function ChatPage() {
 
   const handleSendMessage = () => {
     if (newMessage.trim()) {
-      // Handle sending message
       setNewMessage("")
     }
   }
@@ -159,7 +158,6 @@ export default function ChatPage() {
 
   return (
     <div className="flex h-full bg-gradient-to-br from-black to-gray-900 text-white">
-      {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
@@ -167,7 +165,6 @@ export default function ChatPage() {
         />
       )}
 
-      {/* Sidebar */}
       <aside
         className={`
         fixed left-0 top-0 z-50 h-full w-80 transform border-r border-gray-800 bg-black/90 backdrop-blur-xl transition-transform duration-300 ease-in-out
@@ -176,7 +173,6 @@ export default function ChatPage() {
       `}
       >
         <div className="flex h-full flex-col">
-          {/* Header */}
           <div className="border-b border-gray-800 p-4">
             <div className="flex items-center justify-between">
               <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setSidebarOpen(false)}>
@@ -184,7 +180,6 @@ export default function ChatPage() {
               </Button>
             </div>
 
-            {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
               <Input
@@ -197,7 +192,6 @@ export default function ChatPage() {
           </div>
 
           <ScrollArea className="flex-1">
-            {/* Search Results */}
             {searchQuery && (
               <div className="p-4">
                 <h3 className="mb-3 text-sm font-medium text-gray-400">Search Results</h3>
@@ -239,7 +233,6 @@ export default function ChatPage() {
               </div>
             )}
 
-            {/* Friends List */}
             <div className="p-4">
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="text-sm font-medium text-gray-400">Friends</h3>
@@ -296,9 +289,7 @@ export default function ChatPage() {
         </div>
       </aside>
 
-      {/* Main Chat Area */}
       <div className="flex flex-1 flex-col">
-        {/* Chat Header */}
         <header className="flex h-16 items-center justify-between border-b border-gray-800 bg-black/80 px-4 backdrop-blur-sm">
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setSidebarOpen(true)}>
@@ -334,7 +325,6 @@ export default function ChatPage() {
           )}
         </header>
 
-        {/* Messages Area */}
         {selectedChat ? (
           <>
             <ScrollArea className="flex-1 p-4">
@@ -358,7 +348,6 @@ export default function ChatPage() {
               </div>
             </ScrollArea>
 
-            {/* Message Input */}
             <div className="border-t border-gray-800 bg-black/80 p-4 backdrop-blur-sm">
               <div className="flex gap-2">
                 <Input

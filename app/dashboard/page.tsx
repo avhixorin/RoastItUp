@@ -11,11 +11,8 @@ export default function DashboardPage() {
 
   return (
     <div className="flex h-full bg-black text-white">
-      {/* Main Content */}
       <div className="flex flex-1 flex-col overflow-hidden">
-        {/* Dashboard Content */}
         <main className="flex-1 bg-gradient-to-br from-black to-gray-900 p-4 md:p-6">
-          {/* Welcome Section */}
           <div className="mb-8">
             <h1 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl">
               Welcome back,{" "}
@@ -26,7 +23,6 @@ export default function DashboardPage() {
             <p className="text-gray-400">Ready to bring the heat? Your roasting arena awaits.</p>
           </div>
 
-          {/* Stats Cards */}
           <div className="mb-8 grid gap-6 md:grid-cols-3">
             {stats.map((stat) => (
               <div
@@ -61,9 +57,7 @@ export default function DashboardPage() {
             ))}
           </div>
 
-          {/* Action Buttons */}
           <div className="grid gap-4 md:grid-cols-2">
-            {/* Start New Roast Button */}
             <div className="relative overflow-hidden rounded-xl border border-red-900/20 bg-black/60 p-8 backdrop-blur-xl">
               <div className="relative z-10 text-center">
                 <div className="mb-4 flex justify-center">
@@ -80,7 +74,6 @@ export default function DashboardPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10"></div>
             </div>
 
-            {/* Quick Actions */}
             <div className="space-y-4">
               <div className="rounded-xl border border-gray-800 bg-black/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-orange-900/50">
                 <h3 className="mb-3 font-bold text-white">Quick Actions</h3>
@@ -102,7 +95,6 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Recent Activity */}
           <div className="mt-8">
             <h2 className="mb-4 text-xl font-bold text-white">Recent Activity</h2>
             <div className="rounded-xl border border-gray-800 bg-black/40 backdrop-blur-sm">

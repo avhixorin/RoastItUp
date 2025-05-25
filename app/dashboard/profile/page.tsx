@@ -12,14 +12,12 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 p-4 md:p-6">
       <div className="mx-auto max-w-4xl">
-        {/* Header */}
         <div className="mb-8">
           <h2 className="mb-2 text-3xl font-bold text-white">👤 Your Profile</h2>
           <p className="text-gray-400">Manage your profile information and settings.</p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {/* Profile Overview */}
           <div className="lg:col-span-1">
             <Card className="border-gray-800 bg-black/40 backdrop-blur-sm">
               <CardHeader className="text-center">
@@ -69,7 +67,6 @@ export default function Page() {
             </Card>
           </div>
 
-          {/* Profile Settings */}
           <div className="lg:col-span-2">
             <Card className="border-gray-800 bg-black/40 backdrop-blur-sm">
               <CardHeader>
@@ -98,7 +95,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* Display Name */}
                 <div className="space-y-2">
                   <Label htmlFor="displayName" className="text-sm font-medium text-gray-300">
                     Display Name
@@ -110,7 +106,6 @@ export default function Page() {
                   />
                 </div>
 
-                {/* Email */}
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-sm font-medium text-gray-300">
                     Email
@@ -123,7 +118,6 @@ export default function Page() {
                   />
                 </div>
 
-                {/* Bio */}
                 <div className="space-y-2">
                   <Label htmlFor="bio" className="text-sm font-medium text-gray-300">
                     Bio
@@ -137,7 +131,6 @@ export default function Page() {
                   />
                 </div>
 
-                {/* Username */}
                 <div className="space-y-2">
                   <Label htmlFor="username" className="text-sm font-medium text-gray-300">
                     Username
@@ -149,7 +142,6 @@ export default function Page() {
                   />
                 </div>
 
-                {/* Save Button */}
                 <div className="flex justify-end">
                   <Button className="bg-gradient-to-r from-orange-500 to-red-600 font-medium text-white hover:from-orange-600 hover:to-red-700">
                     Save Changes
